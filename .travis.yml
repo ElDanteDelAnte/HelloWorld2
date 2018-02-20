@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk9
+addons:
+  sonarcloud:
+    organization: "eldantedelante-github"
+    token:
+      secure: 790d2ecf3bb67d79f80210beb7ccb62f29cff04e
+script:
+  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
